@@ -1,0 +1,91 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_stairs.svg' />Flur</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Dachfenster Ost</h3>
+        {% import "widget_shutter.html" as shutter %}
+        <table width="100%"><tr>
+          <td width="50%">
+            {{ shutter.two ('dg.flur.jal_dachfenster_ost', 'Rollladen', 'dg.flur.jal_dachfenster_ost', 'dg.flur.jal_dachfenster_ost.stop', 'dg.flur.jal_dachfenster_ost.pos') }}
+          </td>
+          <td width="50%">
+            {{ shutter.two ('dg.flur.dachfenster_ost', 'Öffner', 'dg.flur.dachfenster_ost', 'dg.flur.dachfenster_ost.stop', 'dg.flur.dachfenster_ost.pos') }}
+          </td>
+        <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Dachfenster West</h3>
+        {% import "widget_shutter.html" as shutter %}
+        <table width="100%"><tr>
+          <td width="50%">
+            {{ shutter.two ('dg.flur.jal_dachfenster_west', 'Rollladen', 'dg.flur.jal_dachfenster_west', 'dg.flur.jal_dachfenster_west.stop', 'dg.flur.jal_dachfenster_west.pos') }}
+          </td>
+          <td width="50%">
+            {{ shutter.two ('dg.flur.dachfenster_west', 'Öffner', 'dg.flur.dachfenster_west', 'dg.flur.dachfenster_west.stop', 'dg.flur.dachfenster_west.pos') }}
+          </td>
+        <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Dachfenster Treppe</h3>
+        {% import "widget_shutter.html" as shutter %}
+        <table width="100%"><tr>
+          <td width="50%">
+            {{ shutter.two ('dg.treppe.dachfenster.jal', 'Rollladen', 'dg.treppe.dachfenster.jal', 'dg.treppe.dachfenster.jal.stop', 'dg.treppe.dachfenster.jal.pos') }}
+          </td>
+          <td width="50%">
+            {{ shutter.two ('dg.treppe.dachfenster', 'Öffner', 'dg.treppe.dachfenster', 'dg.treppe.dachfenster.stop', 'dg.treppe.dachfenster.pos') }}
+          </td>
+        <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('dg.flur.licht','Licht','dg.flur.licht','dg.flur.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('dg.flur.sd1', 'dg.flur.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('dg.flur.temperatur', 'Heizung', 'dg.flur.temperatur', 'dg.flur.temperatur.setpoint', 'dg.flur.temperatur.setpoint_offset', 'dg.flur.temperatur.mode', 'dg.flur.temperatur.mode', 'dg.flur.temperatur.mode', '', '', '', 'dg.flur.temperatur.power') }}
+    </div>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Temperaturverlauf</h3>
+       {{ plot.minmaxavg('dg.flur.temperatur.plot', 'dg.flur.temperatur', '7d', '', '', '', '°', ['', 'Temperatur in °C'], '7') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

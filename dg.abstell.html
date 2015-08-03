@@ -1,0 +1,55 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_dressing_room.svg' />Hauswirtschaftsraum</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Fenster</h3>
+        {% import "widget_shutter.html" as shutter %}
+        <table width="100%"><tr>
+          <td width="50%">
+            {{ shutter.two ('dg.abstell.dachfenster.jal', 'Rollladen', 'dg.abstell.dachfenster.jal', 'dg.abstell.dachfenster.jal.stop', 'dg.abstell.dachfenster.jal.pos') }}
+          </td>
+          <td width="50%">
+            {{ shutter.two ('dg.abstell.dachfenster', 'Öffner', 'dg.abstell.dachfenster', 'dg.abstell.dachfenster.stop', 'dg.abstell.dachfenster.pos') }}
+          </td>
+        <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('dg.abstell.licht','Licht','dg.abstell.licht','dg.abstell.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('dg.abstell.sd1', 'dg.abstell.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('dg.abstell.temperatur', 'Heizung', 'dg.abstell.temperatur', 'dg.abstell.temperatur.setpoint', 'dg.abstell.temperatur.setpoint_offset', 'dg.abstell.temperatur.mode', 'dg.abstell.temperatur.mode', 'dg.abstell.temperatur.mode', '', '', '', 'dg.abstell.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

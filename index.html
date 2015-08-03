@@ -1,0 +1,41 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+  {% import "lib.html" as lib %}
+  {{ lib.updatecheck() }}
+
+  {% import "clock.html" as clock %}
+  {{ clock.digiclock('clock') }}
+
+  <div class="center">
+    {{ now|smartdate('l') }}, {{ now|smartdate() }}
+  </div>
+  <hr>
+  {% import "weather.html" as weather %}
+  {{ weather.current('weather') }}
+  <hr>
+  {{ weather.forecastweek('weather_forecast') }}
+  <hr>
+  {% import "plot.html" as plot %}
+  {{ plot.temprose('temprose',
+    ['og.bad.temperatur', 'og.gast.temperatur', 'og.wohnen.temperatur', 'dg.flur.temperatur', 'dg.abstell.temperatur', 'dg.bad.temperatur', 'dg.arbeiten.temperatur', 'dg.kind.temperatur', 'dg.schlafen.temperatur'],
+    ['og.bad.temperatur', 'og.gast.temperatur', 'og.wohnen.temperatur', 'dg.flur.temperatur', 'dg.abstell.temperatur', 'dg.bad.temperatur', 'dg.arbeiten.temperatur', 'dg.kind.temperatur', 'dg.schlafen.temperatur'],
+    ['OG WC',             'OG Gast',            'OG Wohnen',            'DG Flur',            'DG HWR',                'DG Bad',            'DG Arbeit',            'DG Kind',            'DG Schlafen']) }}
+  <hr>
+
+{% endblock %}
+
+{% block content %}
+  {% include 'navigation.html' %}
+{% endblock %}

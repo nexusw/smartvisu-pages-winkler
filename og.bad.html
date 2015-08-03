@@ -1,0 +1,52 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_toilet.svg' />WC</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+        {% import "widget_shutter.html" as shutter %}
+        {{ shutter.two ('og.bad.jal', 'Rollladen', 'og.bad.jal', 'og.bad.jal.stop', 'og.bad.jal.pos') }}
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('og.bad.licht','Licht','og.bad.licht','og.bad.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('og.bad.sd1', 'og.bad.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Steckdose
+      </div>
+      <div>
+        {{ basic.symbol('og.bad.fenster.auf', 'og.bad.fenster.auf', 'Fenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.bad.fenster.zu', 'og.bad.fenster.auf', 'Fenster ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('og.bad.temperatur', 'Heizung', 'og.bad.temperatur', 'og.bad.temperatur.setpoint', 'og.bad.temperatur.setpoint_offset', 'og.bad.temperatur.mode', 'og.bad.temperatur.mode', 'og.bad.temperatur.mode', '', '', '', 'og.bad.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_sleeping_alternat.svg' />Schlafzimmer</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Fenster</h3>
+      {% import "widget_shutter.html" as shutter %}
+      {{ shutter.two ('dg.schlafen.jal', 'Rollladen', 'dg.schlafen.jal', 'dg.schlafen.jal.stop', 'dg.schlafen.jal.pos') }}
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('dg.schlafen.licht','Licht','dg.schlafen.licht','dg.schlafen.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('dg.schlafen.sd1', 'dg.schlafen.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('dg.schlafen.temperatur', 'Heizung', 'dg.schlafen.temperatur', 'dg.schlafen.temperatur.setpoint', 'dg.schlafen.temperatur.setpoint_offset', 'dg.schlafen.temperatur.mode', 'dg.schlafen.temperatur.mode', 'dg.schlafen.temperatur.mode', '', '', '', 'dg.schlafen.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

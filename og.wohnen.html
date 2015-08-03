@@ -1,0 +1,117 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+  <h1><img class="icon" src='{{ icon0 }}scene_livingroom.svg' />Wohnen</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Alle</h3>
+      <span data-role="controlgroup" data-type="horizontal">
+      Rollläden
+        {{ basic.button(id|_('up'), ['og.wohnen.jal_sued','og.wohnen.jal_ost','og.wohnen.jal_balkon','og.kueche.jal'], '', icon0~'control_arrow_up.svg', 0, 'mini') }}
+        {{ basic.button(id|_('down'), ['og.wohnen.jal_sued','og.wohnen.jal_ost','og.wohnen.jal_balkon','og.kueche.jal'], '', icon0~'control_arrow_down.svg', 1, 'mini') }}
+        {{ basic.button(id|_('stop'), ['og.wohnen.jal_sued.stop','og.wohnen.jal_ost.stop','og.wohnen.jal_balkon.stop','og.kueche.jal.stop'], '', icon0~'audio_stop.svg', 1, 'mini') }}
+      </span>
+      {{ device.dimmer('og.wohnen.licht', 'Lichter', ['og.wohnen.licht','og.wohnen.licht_esstisch','og.kueche.licht'], ['og.wohnen.licht.value','og.wohnen.licht_esstisch.value','og.kueche.licht.value'])}}
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+      {% import "widget_shutter.html" as shutter %}
+      <table width="100%"><tr>
+        <td width="50%">
+          {{ shutter.two('og.wohnen.jal_sued', 'Süd', 'og.wohnen.jal_sued', 'og.wohnen.jal_sued.stop', 'og.wohnen.jal_sued.pos') }}
+        </td>
+        <td width="50%">
+          {{ shutter.two ('og.wohnen.jal_west', 'West', 'og.wohnen.jal_west', 'og.wohnen.jal_west.stop', 'og.wohnen.jal_west.pos') }}
+        </td>
+      <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+      {% import "widget_shutter.html" as shutter %}
+      <table width="100%"><tr>
+        <td width="50%">
+          {{ shutter.two ('og.wohnen.jal_balkon', 'Balkon', 'og.wohnen.jal_balkon', 'og.wohnen.jal_balkon.stop', 'og.wohnen.jal_balkon.pos') }}
+        </td>
+        <td width="50%">
+          {{ shutter.two('og.kueche.jal', 'Küche', 'og.kueche.jal', 'og.kueche.jal.stop', 'og.kueche.jal.pos') }}
+        </td>
+      <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Steckdosen</h3>
+      <div>Wohnzimmer</div>
+      <div>
+        {{ basic.switch('og.wohnen.sd1', 'og.wohnen.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+        {{ basic.switch('og.wohnen.sd2', 'og.wohnen.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Laibung
+      </div>
+      <div>Küche</div>
+      <div>
+        {{ basic.switch('og.kueche.sd1', 'og.kueche.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+        {{ basic.switch('og.kueche.sd2', 'og.kueche.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Laibung
+      </div>
+    </div>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht</h3>
+      <div>
+        {{ device.dimmer('og.wohnen.licht', 'Sofa', 'og.wohnen.licht', 'og.wohnen.licht.value')}}
+        {{ device.dimmer('og.wohnen.licht_esstisch', 'Esstisch', 'og.wohnen.licht_esstisch', 'og.wohnen.licht_esstisch.value')}}
+        {{ device.dimmer('og.kueche.licht', 'Küche', 'og.kueche.licht', 'og.kueche.licht.value')}}
+        {{ basic.switch('og.balkon.licht', 'og.balkon.licht', icon1~'light_wall_2.png', icon0~'light_wall_2.png') }} Balkon
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Fenster</h3>
+      <div>
+        {{ basic.symbol('og.wohnen.fenster_sued.auf', 'og.wohnen.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.wohnen.fenster_sued.zu', 'og.wohnen.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.wohnen.fenster_west.auf', 'og.wohnen.fenster_west.auf', 'Fenster Ost ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.wohnen.fenster_west.zu', 'og.wohnen.fenster_west.auf', 'Fenster Ost ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+      <div>
+        {{ basic.symbol('og.wohnen.balkon.auf', 'og.wohnen.balkon.auf', 'Balkontüre ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.wohnen.balkon.zu', 'og.wohnen.balkon.auf', 'Balkontüre ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.kueche.fenster.auf', 'og.kueche.fenster.auf', 'Küchenfenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.kueche.fenster.zu', 'og.kueche.fenster.auf', 'Küchenfenster ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('og.wohnen.temperatur', 'Heizung', 'og.wohnen.temperatur', 'og.wohnen.temperatur.setpoint', 'og.wohnen.temperatur.setpoint_offset', 'og.wohnen.temperatur.mode', 'og.wohnen.temperatur.mode', 'og.wohnen.temperatur.mode', '', '', '', 'og.wohnen.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

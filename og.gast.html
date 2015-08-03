@@ -1,0 +1,62 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+  <h1><img class="icon" src='{{ icon0 }}scene_visit_guests.svg' />Gast</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+      {% import "widget_shutter.html" as shutter %}
+      <table width="100%"><tr>
+        <td width="50%">
+          {{ shutter.two ('og.gast.jal_ost', 'Ost', 'og.gast.jal_ost', 'og.gast.jal_ost.stop', 'og.gast.jal_ost.pos') }}
+        </td>
+        <td width="50%">
+          {{ shutter.two('og.gast.jal_sued', 'Süd', 'og.gast.jal_sued', 'og.gast.jal_sued.stop', 'og.gast.jal_sued.pos') }}
+        </td>
+      <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('og.gast.licht','Licht','og.gast.licht','og.gast.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('og.gast.sd1', 'og.gast.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+        {{ basic.switch('og.gast.sd2', 'og.gast.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Fensterlaibung
+      </div>
+      <div>
+        {{ basic.symbol('og.gast.fenster_ost.auf', 'og.gast.fenster_ost.auf', 'Fenster Ost ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.gast.fenster_ost.auf', 'og.gast.fenster_ost.auf', 'Fenster Ost ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.gast.fenster_sued.auf', 'og.gast.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.gast.fenster_sued.auf', 'og.gast.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('og.gast.temperatur', 'Heizung', 'og.gast.temperatur', 'og.gast.temperatur.setpoint', 'og.gast.temperatur.setpoint_offset', 'og.gast.temperatur.mode', 'og.gast.temperatur.mode', 'og.gast.temperatur.mode', '', '', '', 'og.gast.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

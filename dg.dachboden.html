@@ -1,0 +1,30 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_storeroom.svg' />Dachboden</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('dg.flur.licht','Licht','dg.flur.licht','dg.flur.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('dg.flur.sd1', 'dg.flur.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

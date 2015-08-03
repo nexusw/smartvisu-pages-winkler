@@ -1,0 +1,61 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_bathroom.svg' />Bad</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+      {% import "widget_shutter.html" as shutter %}
+      <table width="100%"><tr>
+        <td width="50%">
+          {{ shutter.two ('dg.bad.jal_nord', 'Nord', 'dg.bad.jal_nord', 'dg.bad.jal_nord.stop', 'dg.bad.jal_nord.pos') }}
+        </td>
+        <td width="50%">
+          {{ shutter.two('dg.bad.jal_sued', 'Süd', 'dg.bad.jal_sued', 'dg.bad.jal_sued.stop', 'dg.bad.jal_sued.pos') }}
+        </td>
+      <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('dg.bad.licht','Licht','dg.bad.licht','dg.bad.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('dg.bad.sd1', 'dg.bad.sd1', icon1~'message_socket.svg', icon0~'message_socket.png') }} Wand
+      </div>
+      <div>
+        {{ basic.symbol('dg.bad.fenster_nord.auf', 'dg.bad.fenster_nord.auf', 'Fenster Nord ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('dg.bad.fenster_nord.auf', 'dg.bad.fenster_nord.auf', 'Fenster Nord ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('dg.bad.fenster_sued.auf', 'dg.bad.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('dg.bad.fenster_sued.auf', 'dg.bad.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('dg.bad.temperatur', 'Heizung', 'dg.bad.temperatur', 'dg.bad.temperatur.setpoint', 'dg.bad.temperatur.setpoint_offset', 'dg.bad.temperatur.mode', 'dg.bad.temperatur.mode', 'dg.bad.temperatur.mode', '', '', '', 'dg.bad.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

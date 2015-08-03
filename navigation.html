@@ -1,0 +1,183 @@
+<ul data-role="listview" data-dividertheme="c">
+<li data-role="list-divider">OG</li>
+<li data-icon="false">
+  <a href="index.php?page=og.flur">
+    <img class="icon" src="{{ icon0 }}scene_stairs.svg" />
+    <h3>Flur</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.og.flur.licht.on', 'og.flur.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.og.flur.fenster_auf', ['og.flur.fenster_nord.auf', 'og.flur.fenster_sued.auf'], '', icon1~'fts_window_1w_open.svg') }}
+      {{ icon.shutter('aside.og.flur.jal_treppe', '', 'og.flur.jal_treppe.pos') }}
+      {{ icon.shutter('aside.og.flur.jal', '', 'og.flur.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=og.bad">
+    <img class="icon" src="{{ icon0 }}scene_toilet.svg" />
+    <h3>WC</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.og.bad.licht.on', 'og.bad.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.og.bad.fenster_auf', 'og.bad.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.og.bad.temperatur', 'og.bad.temperatur', '°') }}
+      {{ icon.shutter('aside.og.bad.jal', '', 'og.bad.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=og.garderobe">
+    <img class="icon" src="{{ icon0 }}scene_dressing_room.svg" />
+    <h3>Garderobe</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.og.garderobe.licht.on', 'og.garderobe.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.og.garderobe.fenster_auf', 'og.garderobe.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ icon.shutter('aside.og.wohnen.jal_sued', '', 'og.wohnen.jal_sued.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=og.gast">
+    <img class="icon" src="{{ icon0 }}scene_visit_guests.svg" />
+    <h3>Gästezimmer</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.og.gast.licht.on', 'og.gast.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.og.gast.fenster', ['og.gast.jal_ost.auf', 'og.gast.jal_sued.auf'], '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.og.gast.temperatur', 'og.gast.temperatur', '°') }}
+      {{ icon.shutter('aside.og.gast.jal_ost', '', 'og.gast.jal_ost.pos') }}
+      {{ icon.shutter('aside.og.gast.jal_sued', '', 'og.gast.jal_sued.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=og.wohnen">
+    <img class="icon" src="{{ icon0 }}scene_livingroom.svg"/>
+    <h3>Küchen-, Ess- und Wohnbereich</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.og.wohnen.licht.on', ['og.wohnen.licht', 'og.wohnen.licht_esstisch', 'og.kueche.licht', 'og.balkon.licht'], '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.og.wohnen.fenster', ['og.wohnen.fenster_sued.auf', 'og.wohnen.fenster_west.auf', 'og.wohnen.balkon.auf', 'og.kueche.fenster.auf'], '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.og.wohnen.temperatur', 'og.wohnen.temperatur', '°') }}
+      {{ icon.shutter('aside.og.wohnen.jal_sued', '', 'og.wohnen.jal_sued.pos') }}
+      {{ icon.shutter('aside.og.wohnen.jal_west', '', 'og.wohnen.jal_west.pos') }}
+      {{ icon.shutter('aside.og.balkon.jal', '', 'og.balkon.jal.pos') }}
+      {{ icon.shutter('aside.og.kueche.jal', '', 'og.kueche.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=og.abstell">
+    <img class="icon" src="{{ icon0 }}scene_storeroom.svg" />
+    <h3>Abstellraum</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.og.abstell.licht.on', 'og.abstell.licht', '', icon1~'light_light.svg') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=og.zentral">
+    <img class="icon" src="{{ icon0 }}control_building_s_og.svg" />
+    <h3>Zentral</h3>
+  </a>
+</li>
+
+
+<li data-role="list-divider">DG</li>
+
+<li data-icon="false">
+  <a href="index.php?page=dg.abstell">
+    <img class="icon" src="{{ icon0 }}scene_dressing_room.svg" />
+    <h3>Hauswirtschaftsraum</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.abstell.licht.on', 'dg.abstell.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.abstell.fenster_auf', 'dg.abstell.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.abstell.temperatur', 'dg.abstell.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.abstell.jal', '', 'dg.abstell.jal.pos') }}
+      {{ icon.shutter('aside.dg.abstell.dachfenster', '', 'dg.abstell.dachfenster.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.bad">
+    <img class="icon" src="{{ icon0 }}scene_bathroom.svg" />
+    <h3>Bad</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.bad.licht.on', 'dg.bad.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.bad.fenster', ['dg.bad.fenster_nord.auf', 'dg.bad.fenster_sued.auf'], '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.bad.temperatur', 'dg.bad.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.bad_nord.jal', '', 'dg.bad.jal_nord.pos') }}
+      {{ icon.shutter('aside.dg.bad_sued.jal', '', 'dg.bad.jal_sued.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.kind">
+    <img class="icon" src="{{ icon0 }}scene_childs_room.svg" />
+    <h3>Kinderzimmer</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.kind.licht.on', 'dg.kind.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.kind.fenster', 'dg.kind.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.kind.temperatur', 'dg.kind.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.kind.jal', '', 'dg.kind.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.arbeiten">
+    <img class="icon" src="{{ icon0 }}scene_office.svg" />
+    <h3>Büro</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.arbeiten.licht.on', 'dg.arbeiten.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.arbeiten.fenster', 'dg.arbeiten.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.arbeiten.temperatur', 'dg.arbeiten.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.arbeiten.jal', '', 'dg.arbeiten.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.schlafen">
+    <img class="icon" src="{{ icon0 }}scene_sleeping_alternat.svg" />
+    <h3>Schlafzimmer</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.schlafen.licht.on', 'dg.schlafen.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.schlafen.fenster', 'dg.schlafen.tuere.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.schlafen.temperatur', 'dg.schlafen.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.schlafen.jal', '', 'dg.schlafen.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.flur">
+    <img class="icon" src="{{ icon0 }}scene_stairs.svg" />
+    <h3>Flur</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.flur.licht.on', 'dg.flur.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.flur.fenster', 'dg.flur.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.flur.temperatur', 'dg.flur.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.flur.jal_dachfenster_west', '', 'dg.flur.jal_dachfenster_west.pos') }}
+      {{ icon.shutter('aside.dg.flur.dachfenster_west', '', 'dg.flur.dachfenster_west.pos') }}
+      {{ icon.shutter('aside.dg.flur.jal_dachfenster_ost', '', 'dg.flur.jal_dachfenster_ost.pos') }}
+      {{ icon.shutter('aside.dg.flur.dachfenster_ost', '', 'dg.flur.dachfenster_ost.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.dachboden">
+    <img class="icon" src="{{ icon0 }}scene_storeroom.svg" />
+    <h3>Dachboden</h3>
+    <div class="ui-li-aside">
+      {{ basic.symbol('aside.dg.dachboden.licht.on', 'dg.dachboden.licht', '', icon1~'light_light.svg') }}
+      {{ basic.symbol('aside.dg.dachboden.fenster', 'dg.dachboden.fenster.auf', '', icon1~'fts_window_1w_open.svg') }}
+      {{ basic.float('aside.dg.dachboden.temperatur', 'dg.dachboden.temperatur', '°') }}
+      {{ icon.shutter('aside.dg.dachboden.jal', '', 'dg.dachboden.jal.pos') }}
+    </div>
+  </a>
+</li>
+<li data-icon="false">
+  <a href="index.php?page=dg.zentral">
+    <img class="icon" src="{{ icon0 }}control_building_s_dg.svg" />
+    <h3>Zentral</h3>
+  </a>
+</li>
+
+
+
+</ul>

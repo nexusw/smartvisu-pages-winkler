@@ -1,0 +1,40 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}control_building_s_dg.svg' />Zentral</h1>
+
+	<div class="block">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Jal</h3>
+			{{ device.shutter('dg.zentral.jal', 'Jal', 'dg.zentral.jal', 'dg.zentral.jal.stop', 'dg.zentral.jal.pos', '', '', '', '', '', '', '') }}
+		</div>
+
+	</div>
+</div>
+<div class="block">
+	<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>Licht</h3>
+			{{ device.dimmer('dg.zentral.licht','Licht','dg.zentral.licht','dg.zentral.licht.value')}}
+		</div>
+
+	</div>
+</div>
+
+
+{% endblock %}
+

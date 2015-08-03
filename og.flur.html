@@ -1,0 +1,53 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_stairs.svg' />Flur</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+      {% import "widget_shutter.html" as shutter %}
+      <table width="100%"><tr>
+        <td width="50%">
+          {{ shutter.two ('og.flur.jal_nord', 'Nord', 'og.flur.jal_nord', 'og.flur.jal_nord.stop', 'og.flur.jal_nord.pos') }}
+        </td>
+        <td width="50%">
+          {{ shutter.two('og.flur.jal_sued', 'Süd', 'og.flur.jal_sued', 'og.flur.jal_sued.stop', 'og.flur.jal_sued.pos') }}
+        </td>
+      <tr></table>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('og.flur.licht','Licht','og.flur.licht','og.flur.licht.value')}}
+      <div>
+      </div>
+        {{ basic.switch('og.flur.sd1', 'og.flur.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+        {{ basic.switch('og.flur.sd2', 'og.flur.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Leibung
+      <div>
+      </div>
+        {{ basic.symbol('og.flur.fenster_nord.auf', 'og.flur.fenster_nord.auf', 'Fenster Nord ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.flur.fenster_nord.auf', 'og.flur.fenster_nord.auf', 'Fenster Nord ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.flur.fenster_sued.auf', 'og.flur.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('og.flur.fenster_sued.auf', 'og.flur.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

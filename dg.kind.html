@@ -1,0 +1,53 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<h1><img class="icon" src='{{ icon0 }}scene_childs_room.svg' />Kinderzimmer</h1>
+
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Rolladen</h3>
+        {% import "widget_shutter.html" as shutter %}
+        {{ shutter.two ('dg.kind.jal', 'Rollladen', 'dg.kind.jal', 'dg.kind.jal.stop', 'dg.kind.jal.pos') }}
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Licht und Steckdosen</h3>
+      <div>
+        {{ device.dimmer('dg.kind.licht','Licht','dg.kind.licht','dg.kind.licht.value')}}
+      </div>
+      <div>
+        {{ basic.switch('dg.kind.sd1', 'dg.kind.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
+        {{ basic.switch('dg.kind.sd2', 'dg.kind.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Leibung
+      </div>
+      <div>
+        {{ basic.symbol('dg.kind.fenster.auf', 'dg.kind.fenster.auf', 'Fenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
+        {{ basic.symbol('dg.kind.fenster.zu', 'dg.kind.fenster.auf', 'Fenster ist zu', icon0~'fts_window_1w.png', 0) }}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Heizung</h3>
+      {{ device.rtr('dg.kind.temperatur', 'Heizung', 'dg.kind.temperatur', 'dg.kind.temperatur.setpoint', 'dg.kind.temperatur.setpoint_offset', 'dg.kind.temperatur.mode', 'dg.kind.temperatur.mode', 'dg.kind.temperatur.mode', '', '', '', 'dg.kind.temperatur.power') }}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
