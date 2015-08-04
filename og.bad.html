@@ -31,11 +31,11 @@
         {{ device.dimmer('og.bad.licht','Licht','og.bad.licht','og.bad.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('og.bad.sd1', 'og.bad.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Steckdose
+        {{ basic.switch('og.bad.sd1', 'og.bad.sd1', 'message_socket.svg', 'message_socket.svg') }} Steckdose
       </div>
       <div>
-        {{ basic.symbol('og.bad.fenster.auf', 'og.bad.fenster.auf', 'Fenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('og.bad.fenster.zu', 'og.bad.fenster.auf', 'Fenster ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.bad.fenster.auf', 'og.bad.fenster.auf', 'Fenster ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('og.bad.fenster.zu', 'og.bad.fenster.auf', 'Fenster ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>

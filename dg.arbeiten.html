@@ -31,12 +31,12 @@
         {{ device.dimmer('dg.arbeit.licht','Licht','dg.arbeit.licht','dg.arbeit.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('dg.arbeit.sd1', 'dg.arbeit.sd1', icon1~'message_socket.svg', icon0~'message_socket.svg') }} Wand
-        {{ basic.switch('dg.arbeit.sd2', 'dg.arbeit.sd2', icon1~'message_socket.svg', icon0~'message_socket.svg') }} Leibung
+        {{ basic.switch('dg.arbeit.sd1', 'dg.arbeit.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
+        {{ basic.switch('dg.arbeit.sd2', 'dg.arbeit.sd2', 'message_socket.svg', 'message_socket.svg') }} Leibung
       </div>
       <div>
-        {{ basic.symbol('dg.arbeit.fenster.auf', 'dg.arbeit.fenster.auf', 'Fenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('dg.arbeit.fenster.zu', 'dg.arbeit.fenster.auf', 'Fenster ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('dg.arbeit.fenster.auf', 'dg.arbeit.fenster.auf', 'Fenster ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('dg.arbeit.fenster.zu', 'dg.arbeit.fenster.auf', 'Fenster ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>

@@ -38,14 +38,14 @@
         {{ device.dimmer('og.gast.licht','Licht','og.gast.licht','og.gast.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('og.gast.sd1', 'og.gast.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
-        {{ basic.switch('og.gast.sd2', 'og.gast.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Fensterlaibung
+        {{ basic.switch('og.gast.sd1', 'og.gast.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
+        {{ basic.switch('og.gast.sd2', 'og.gast.sd2', 'message_socket.svg', 'message_socket.svg') }} Fensterlaibung
       </div>
       <div>
-        {{ basic.symbol('og.gast.fenster_ost.auf', 'og.gast.fenster_ost.auf', 'Fenster Ost ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('og.gast.fenster_ost.auf', 'og.gast.fenster_ost.auf', 'Fenster Ost ist zu', icon0~'fts_window_1w.png', 0) }}
-        {{ basic.symbol('og.gast.fenster_sued.auf', 'og.gast.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('og.gast.fenster_sued.auf', 'og.gast.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.gast.fenster_ost.auf', 'og.gast.fenster_ost.auf', 'Fenster Ost ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('og.gast.fenster_ost.auf', 'og.gast.fenster_ost.auf', 'Fenster Ost ist zu', 'fts_window_1w.svg', 0) }}
+        {{ basic.symbol('og.gast.fenster_sued.auf', 'og.gast.fenster_sued.auf', 'Fenster Sued ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('og.gast.fenster_sued.auf', 'og.gast.fenster_sued.auf', 'Fenster Sued ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>

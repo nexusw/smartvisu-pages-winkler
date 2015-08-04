@@ -31,12 +31,12 @@
         {{ device.dimmer('dg.kind.licht','Licht','dg.kind.licht','dg.kind.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('dg.kind.sd1', 'dg.kind.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
-        {{ basic.switch('dg.kind.sd2', 'dg.kind.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Leibung
+        {{ basic.switch('dg.kind.sd1', 'dg.kind.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
+        {{ basic.switch('dg.kind.sd2', 'dg.kind.sd2', 'message_socket.svg', 'message_socket.svg') }} Leibung
       </div>
       <div>
-        {{ basic.symbol('dg.kind.fenster.auf', 'dg.kind.fenster.auf', 'Fenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('dg.kind.fenster.zu', 'dg.kind.fenster.auf', 'Fenster ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('dg.kind.fenster.auf', 'dg.kind.fenster.auf', 'Fenster ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('dg.kind.fenster.zu', 'dg.kind.fenster.auf', 'Fenster ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>

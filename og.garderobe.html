@@ -31,12 +31,12 @@
         {{ device.dimmer('og.garderobe.licht','Licht','og.garderobe.licht','og.garderobe.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('og.garderobe.sd1', 'og.garderobe.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
-        {{ basic.switch('og.garderobe.sd2', 'og.garderobe.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Leibung
+        {{ basic.switch('og.garderobe.sd1', 'og.garderobe.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
+        {{ basic.switch('og.garderobe.sd2', 'og.garderobe.sd2', 'message_socket.svg', 'message_socket.svg') }} Leibung
       </div>
       <div>
-        {{ basic.symbol('og.garderobe.fenster.auf', 'og.garderobe.fenster.auf', 'Fenster ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('og.garderobe.fenster.zu', 'og.garderobe.fenster.auf', 'Fenster ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.garderobe.fenster.auf', 'og.garderobe.fenster.auf', 'Fenster ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('og.garderobe.fenster.zu', 'og.garderobe.fenster.auf', 'Fenster ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>

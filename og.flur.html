@@ -38,14 +38,14 @@
         {{ device.dimmer('og.flur.licht','Licht','og.flur.licht','og.flur.licht.value')}}
       <div>
       </div>
-        {{ basic.switch('og.flur.sd1', 'og.flur.sd1', icon1~'message_socket.png', icon0~'message_socket.png') }} Wand
-        {{ basic.switch('og.flur.sd2', 'og.flur.sd2', icon1~'message_socket.png', icon0~'message_socket.png') }} Leibung
+        {{ basic.switch('og.flur.sd1', 'og.flur.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
+        {{ basic.switch('og.flur.sd2', 'og.flur.sd2', 'message_socket.svg', 'message_socket.svg') }} Leibung
       <div>
       </div>
-        {{ basic.symbol('og.flur.fenster_nord.auf', 'og.flur.fenster_nord.auf', 'Fenster Nord ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('og.flur.fenster_nord.auf', 'og.flur.fenster_nord.auf', 'Fenster Nord ist zu', icon0~'fts_window_1w.png', 0) }}
-        {{ basic.symbol('og.flur.fenster_sued.auf', 'og.flur.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('og.flur.fenster_sued.auf', 'og.flur.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('og.flur.fenster_nord.auf', 'og.flur.fenster_nord.auf', 'Fenster Nord ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('og.flur.fenster_nord.auf', 'og.flur.fenster_nord.auf', 'Fenster Nord ist zu', 'fts_window_1w.svg', 0) }}
+        {{ basic.symbol('og.flur.fenster_sued.auf', 'og.flur.fenster_sued.auf', 'Fenster Sued ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('og.flur.fenster_sued.auf', 'og.flur.fenster_sued.auf', 'Fenster Sued ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>

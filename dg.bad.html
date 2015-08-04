@@ -38,13 +38,13 @@
         {{ device.dimmer('dg.bad.licht','Licht','dg.bad.licht','dg.bad.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('dg.bad.sd1', 'dg.bad.sd1', icon1~'message_socket.svg', icon0~'message_socket.png') }} Wand
+        {{ basic.switch('dg.bad.sd1', 'dg.bad.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
       </div>
       <div>
-        {{ basic.symbol('dg.bad.fenster_nord.auf', 'dg.bad.fenster_nord.auf', 'Fenster Nord ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('dg.bad.fenster_nord.auf', 'dg.bad.fenster_nord.auf', 'Fenster Nord ist zu', icon0~'fts_window_1w.png', 0) }}
-        {{ basic.symbol('dg.bad.fenster_sued.auf', 'dg.bad.fenster_sued.auf', 'Fenster Sued ist auf', icon1~'fts_window_1w_open.png', 1) }}
-        {{ basic.symbol('dg.bad.fenster_sued.auf', 'dg.bad.fenster_sued.auf', 'Fenster Sued ist zu', icon0~'fts_window_1w.png', 0) }}
+        {{ basic.symbol('dg.bad.fenster_nord.auf', 'dg.bad.fenster_nord.auf', 'Fenster Nord ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('dg.bad.fenster_nord.auf', 'dg.bad.fenster_nord.auf', 'Fenster Nord ist zu', 'fts_window_1w.svg', 0) }}
+        {{ basic.symbol('dg.bad.fenster_sued.auf', 'dg.bad.fenster_sued.auf', 'Fenster Sued ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('dg.bad.fenster_sued.auf', 'dg.bad.fenster_sued.auf', 'Fenster Sued ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>
