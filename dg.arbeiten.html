@@ -19,7 +19,7 @@
     <div data-role="collapsible" data-collapsed="false">
       <h3>Rolladen</h3>
         {% import "widget_shutter.html" as shutter %}
-        {{ shutter.two ('dg.arbeit.jal', 'Rollladen', 'dg.arbeit.jal', 'dg.arbeit.jal.stop', 'dg.arbeit.jal.pos') }}
+        {{ shutter.two ('dg.arbeiten.jal', 'Rollladen', 'dg.arbeiten.jal', 'dg.arbeiten.jal.stop', 'dg.arbeiten.jal.pos') }}
     </div>
   </div>
 </div>
@@ -28,15 +28,15 @@
     <div data-role="collapsible" data-collapsed="false">
       <h3>Licht und Steckdosen</h3>
       <div>
-        {{ device.dimmer('dg.arbeit.licht','Licht','dg.arbeit.licht','dg.arbeit.licht.value')}}
+        {{ device.dimmer('dg.arbeiten.licht','Licht','dg.arbeiten.licht','dg.arbeiten.licht.value')}}
       </div>
       <div>
-        {{ basic.switch('dg.arbeit.sd1', 'dg.arbeit.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
-        {{ basic.switch('dg.arbeit.sd2', 'dg.arbeit.sd2', 'message_socket.svg', 'message_socket.svg') }} Leibung
+        {{ basic.switch('dg.arbeiten.sd1', 'dg.arbeiten.sd1', 'message_socket.svg', 'message_socket.svg') }} Wand
+        {{ basic.switch('dg.arbeiten.sd2', 'dg.arbeiten.sd2', 'message_socket.svg', 'message_socket.svg') }} Leibung
       </div>
       <div>
-        {{ basic.symbol('dg.arbeit.fenster.auf', 'dg.arbeit.fenster.auf', 'Fenster ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
-        {{ basic.symbol('dg.arbeit.fenster.zu', 'dg.arbeit.fenster.auf', 'Fenster ist zu', 'fts_window_1w.svg', 0) }}
+        {{ basic.symbol('dg.arbeiten.fenster.auf', 'dg.arbeiten.fenster.auf', 'Fenster ist auf', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('dg.arbeiten.fenster.zu', 'dg.arbeiten.fenster.auf', 'Fenster ist zu', 'fts_window_1w.svg', 0) }}
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
   <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
     <div data-role="collapsible" data-collapsed="false">
       <h3>Heizung</h3>
-      {{ device.rtr('dg.arbeit.temperatur', 'Heizung', 'dg.arbeit.temperatur', 'dg.arbeit.temperatur.setpoint', 'dg.arbeit.temperatur.setpoint_offset', 'dg.arbeit.temperatur.mode', 'dg.arbeit.temperatur.mode', 'dg.arbeit.temperatur.mode', '', '', '', 'dg.arbeit.temperatur.power') }}
+      {{ device.rtr('dg.arbeiten.temperatur', 'Heizung', 'dg.arbeiten.temperatur', 'dg.arbeiten.temperatur.setpoint', 'dg.arbeiten.temperatur.setpoint_offset', 'dg.arbeiten.temperatur.mode', 'dg.arbeiten.temperatur.mode', 'dg.arbeiten.temperatur.mode', '', '', '', 'dg.arbeiten.temperatur.power') }}
     </div>
   </div>
 </div>
