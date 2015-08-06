@@ -1,0 +1,3 @@
+[submodule "widgets/uzsu"]
+	path = widgets/uzsu
+	url = https://github.com/mworion/uzsu_widget.git
