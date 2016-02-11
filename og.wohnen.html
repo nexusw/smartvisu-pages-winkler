@@ -24,7 +24,7 @@
         {{ basic.button(id|_('down'), ['og.wohnen.jal_sued','og.wohnen.jal_ost','og.wohnen.jal_balkon','og.kueche.jal'], '', 'control_arrow_down.svg', 1, 'mini') }}
         {{ basic.button(id|_('stop'), ['og.wohnen.jal_sued.stop','og.wohnen.jal_ost.stop','og.wohnen.jal_balkon.stop','og.kueche.jal.stop'], '', 'audio_stop.svg', 1, 'mini') }}
       </span>
-      {{ device.dimmer('og.wohnen.licht', 'Lichter', ['og.wohnen.licht','og.wohnen.licht_esstisch','og.kueche.licht'], ['og.wohnen.licht.value','og.wohnen.licht_esstisch.value','og.kueche.licht.value'])}}
+      {{ device.dimmer('og.wohnen.licht_zentral', 'Lichter', ['og.wohnen.pm.sperren','og.wohnen.pm_esstisch.sperren','og.kueche.pm.sperren'], ['og.wohnen.licht.value','og.wohnen.licht_esstisch.value','og.kueche.licht.value'])}}
     </div>
   </div>
 </div>
@@ -78,9 +78,9 @@
     <div data-role="collapsible" data-collapsed="false">
       <h3>Licht</h3>
       <div>
-        {{ device.dimmer('og.wohnen.licht', 'Sofa', 'og.wohnen.licht', 'og.wohnen.licht.value')}}
-        {{ device.dimmer('og.wohnen.licht_esstisch', 'Esstisch', 'og.wohnen.licht_esstisch', 'og.wohnen.licht_esstisch.value')}}
-        {{ device.dimmer('og.kueche.licht', 'Küche', 'og.kueche.licht', 'og.kueche.licht.value')}}
+        {{ device.dimmer('og.wohnen.licht', 'Sofa', 'og.wohnen.pm.sperren', 'og.wohnen.licht.value')}}
+        {{ device.dimmer('og.wohnen.licht_esstisch', 'Esstisch', 'og.wohnen.pm_esstisch.sperren', 'og.wohnen.licht_esstisch.value')}}
+        {{ device.dimmer('og.kueche.licht', 'Küche', 'og.kueche.pm.sperren', 'og.kueche.licht.value')}}
         {{ basic.switch('og.balkon.licht', 'og.balkon.licht', 'light_wall_2.svg', 'light_wall_2.svg') }} Balkon
       </div>
     </div>
