@@ -113,5 +113,12 @@
     </div>
   </div>
 </div>
-
+<div class="block">
+  <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Temperaturverlauf</h3>
+      {{ plot.rtr('p1', 'og.wohnen.temperatur', 'og.wohnen.temperatur.setpoint', 'og.wohnen.temperatur.power') }}
+    </div>
+  </div>
+</div>
 {% endblock %}
