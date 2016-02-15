@@ -8,8 +8,8 @@
       <div class="ui-li-aside">  
         {{ basic.symbol('aside.og.flur.licht.on', 'og.flur.licht', '', 'light_light.svg', 1, 'or', 'icon1') }}
         {{ basic.symbol('aside.og.flur.fenster_auf', ['og.flur.fenster_nord.auf', 'og.flur.fenster_sued.auf'], '', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
-        {{ icon.shutter('aside.og.flur.jal_treppe', '', 'og.flur.jal_treppe.pos') }}
-        {{ icon.shutter('aside.og.flur.jal', '', 'og.flur.jal.pos') }}
+        {{ icon.shutter('aside.og.flur.jal_nord', '', 'og.flur.jal_nord.pos') }}
+        {{ icon.shutter('aside.og.flur.jal_sued', '', 'og.flur.jal_sued.pos') }}
       </div>
     </a>
   </li>
@@ -42,7 +42,7 @@
       <h3>Gästezimmer</h3>
       <div class="ui-li-aside">
         {{ basic.symbol('aside.og.gast.licht.on', 'og.gast.licht', '', 'light_light.svg' ,1 ,'or' ,'icon1') }}
-        {{ basic.symbol('aside.og.gast.fenster', ['og.gast.jal_ost.auf', 'og.gast.jal_sued.auf'], '', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
+        {{ basic.symbol('aside.og.gast.fenster', ['og.gast.fenster_ost.auf', 'og.gast.fenster_sued.auf'], '', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
         {{ basic.float('aside.og.gast.temperatur', 'og.gast.temperatur', '°') }} <br />
         {{ icon.shutter('aside.og.gast.jal_ost', '', 'og.gast.jal_ost.pos') }}
         {{ icon.shutter('aside.og.gast.jal_sued', '', 'og.gast.jal_sued.pos') }}
@@ -59,7 +59,7 @@
         {{ basic.float('aside.og.wohnen.temperatur', 'og.wohnen.temperatur', '°') }} <br />
         {{ icon.shutter('aside.og.wohnen.jal_sued', '', 'og.wohnen.jal_sued.pos') }}
         {{ icon.shutter('aside.og.wohnen.jal_west', '', 'og.wohnen.jal_west.pos') }}
-        {{ icon.shutter('aside.og.balkon.jal', '', 'og.balkon.jal.pos') }}
+        {{ icon.shutter('aside.og.wohnen.jal_balkon', '', 'og.wohnen.jal_balkon.pos') }}
         {{ icon.shutter('aside.og.kueche.jal', '', 'og.kueche.jal.pos') }}
       </div>
     </a>
@@ -89,9 +89,8 @@
       <h3>Hauswirtschaftsraum</h3>
       <div class="ui-li-aside">
         {{ basic.symbol('aside.dg.abstell.licht.on', 'dg.abstell.licht', '', 'light_light.svg', 1, 'or', 'icon1') }}
-        {{ basic.symbol('aside.dg.abstell.fenster_auf', 'dg.abstell.fenster.auf', '', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
         {{ basic.float('aside.dg.abstell.temperatur', 'dg.abstell.temperatur', '°') }} <br />
-        {{ icon.shutter('aside.dg.abstell.jal', '', 'dg.abstell.jal.pos') }}
+        {{ icon.shutter('aside.dg.abstell.jal', '', 'dg.abstell.dachfenster.jal.pos') }}
         {{ icon.shutter('aside.dg.abstell.dachfenster', '', 'dg.abstell.dachfenster.pos') }}
       </div>
     </a>
@@ -151,7 +150,6 @@
       <h3>Flur</h3>
       <div class="ui-li-aside">
         {{ basic.symbol('aside.dg.flur.licht.on', 'dg.flur.licht', '', 'light_light.svg', 1, 'or', 'icon1') }}
-        {{ basic.symbol('aside.dg.flur.fenster', 'dg.flur.fenster.auf', '', 'fts_window_1w_open.svg', 1, 'or', 'icon1') }}
         {{ basic.float('aside.dg.flur.temperatur', 'dg.flur.temperatur', '°') }} <br />
         {{ icon.shutter('aside.dg.flur.jal_dachfenster_west', '', 'dg.flur.jal_dachfenster_west.pos') }}
         {{ icon.shutter('aside.dg.flur.dachfenster_west', '', 'dg.flur.dachfenster_west.pos') }}
